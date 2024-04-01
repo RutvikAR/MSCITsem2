@@ -224,3 +224,51 @@ Element at index 0: Apple
 Element at index 1: Banana
 Element at index 2: Orange
 Element at index 3: Mango
+
+5. Write a Program to Install & Routing in Express JS.
+    First, make sure you have Node.js installed on your system.
+
+Initialize a new Node.js project. Open your terminal and navigate to the directory where you want to create the project, then run:
+
+npm init -y
+
+Install Express.js as a dependency:
+npm install express
+
+Create a file named app.js and add the following code:
+// Importing required modules
+const express = require('express');
+
+// Creating an Express application
+const app = express();
+const port = 3000;
+
+// Basic route
+app.get('/', (req, res) => {
+    res.send('Hello, World!');
+});
+
+// Route with parameters
+app.get('/hello/:name', (req, res) => {
+    const name = req.params.name;
+    res.send(`Hello, ${name}!`);
+});
+
+// Route with query parameters
+app.get('/greet', (req, res) => {
+    const name = req.query.name || 'World';
+    res.send(`Greetings, ${name}!`);
+});
+
+// Start the server
+app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`);
+});
+Run your Express.js application:
+node app.js
+
+output:
+http://localhost:3000/ : Displays "Hello, World!"
+http://localhost:3000/hello/John : Displays "Hello, John!"
+http://localhost:3000/greet?name=Emma : Displays "Greetings, Emma!"
+http://localhost:3000/greet : Displays "Greetings, World!"
