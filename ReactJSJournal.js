@@ -289,6 +289,23 @@ cd my-react-app
 Start the React development server:
 npm start
 
+import React from 'react';
+
+function App() {
+  return (
+    <div>
+      <h1>Hello, React!</h1>
+      <p>This is a simple React.js application.</p>
+    </div>
+  );
+}
+
+export default App;
+output:
+Hello, React!
+This is a simple React.js application.
+    
+
 7. Write a Program to Create Class Component in React JS with output.
     import React, { Component } from 'react';
 
