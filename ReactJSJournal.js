@@ -272,3 +272,117 @@ http://localhost:3000/ : Displays "Hello, World!"
 http://localhost:3000/hello/John : Displays "Hello, John!"
 http://localhost:3000/greet?name=Emma : Displays "Greetings, Emma!"
 http://localhost:3000/greet : Displays "Greetings, World!"
+
+6. Write a Program to Install React JS.
+Install Node.js:
+    If you haven't already installed Node.js, you can download and install it from the official website: Node.js Downloads.
+
+Create a new React.js project:
+Open your terminal or command prompt, and navigate to the directory where you want to create your React.js project.
+
+Run the following command to create a new React.js project using Create React App:
+npx create-react-app my-react-app
+
+Once the project is created, navigate to the project directory:
+cd my-react-app
+
+Start the React development server:
+npm start
+
+7. Write a Program to Create Class Component in React JS with output.
+    import React, { Component } from 'react';
+
+// Define a class component
+class Greeting extends Component {
+  render() {
+    return (
+      <div>
+        <h1>Hello, {this.props.name}!</h1>
+        <p>Welcome to React.js Class Components</p>
+      </div>
+    );
+  }
+}
+
+// Export the component to use in other files
+export default Greeting;
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Greeting from './Greeting'; // Assuming Greeting component is in the same directory
+
+ReactDOM.render(
+  <React.StrictMode>
+    <Greeting name="John" />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+
+output:
+Hello, John!
+Welcome to React.js Class Components
+
+8. Write a Program to Create Class Component in React JS with output .
+same program 7.
+
+9. Write a Program to create JSX Styling in React JS.
+Using Inline Styles:
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const styles = {
+  container: {
+    textAlign: 'center',
+    padding: '20px',
+    backgroundColor: '#f0f0f0',
+    borderRadius: '5px',
+  },
+  heading: {
+    color: 'blue',
+    fontSize: '24px',
+    fontWeight: 'bold',
+  },
+  paragraph: {
+    color: 'green',
+    fontSize: '18px',
+  },
+};
+
+const JSXStyling = () => {
+  return (
+    <div style={styles.container}>
+      <h1 style={styles.heading}>Styled JSX Component</h1>
+      <p style={styles.paragraph}>Using inline styles in React.js</p>
+    </div>
+  );
+};
+
+ReactDOM.render(<JSXStyling />, document.getElementById('root'));
+output:
+Styled JSX Component
+Using inline styles in React.js
+
+10.Write a Program to Create a any Operator in React JS.
+    import React from 'react';
+import ReactDOM from 'react-dom';
+
+const ShowMessage = ({ isLoggedIn }) => {
+  return (
+    <div>
+      {isLoggedIn ? (
+        <p>Welcome, User!</p>
+      ) : (
+        <p>Please log in to continue.</p>
+      )}
+    </div>
+  );
+};
+
+ReactDOM.render(
+  <ShowMessage isLoggedIn={true} />,
+  document.getElementById('root')
+);
+
+output:
+Welcome, User!
+
